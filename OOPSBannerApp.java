@@ -2,50 +2,50 @@ public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        // UC4: Store banner lines in String Array
-        String[] banner = new String[7];
+        // UC5: Inline Array Initialization with String.join()
+        String[] banner = {
+                String.join("   ",
+                        "  OOOOO  ",
+                        "  OOOOO  ",
+                        "  PPPPP  ",
+                        "  SSSSS  "),
 
-        banner[0] = String.join("   ",
-                "  OOOOO  ",
-                "  OOOOO  ",
-                "  PPPPP  ",
-                "  SSSSS  ");
+                String.join("   ",
+                        " OO   OO ",
+                        " OO   OO ",
+                        " PP   PP ",
+                        " SS      "),
 
-        banner[1] = String.join("   ",
-                " OO   OO ",
-                " OO   OO ",
-                " PP   PP ",
-                " SS      ");
+                String.join("   ",
+                        " OO   OO ",
+                        " OO   OO ",
+                        " PPPPP   ",
+                        "  SSSSS  "),
 
-        banner[2] = String.join("   ",
-                " OO   OO ",
-                " OO   OO ",
-                " PPPPP   ",
-                "  SSSSS  ");
+                String.join("   ",
+                        " OO   OO ",
+                        " OO   OO ",
+                        " PP      ",
+                        "      SS "),
 
-        banner[3] = String.join("   ",
-                " OO   OO ",
-                " OO   OO ",
-                " PP      ",
-                "      SS ");
+                String.join("   ",
+                        " OO   OO ",
+                        " OO   OO ",
+                        " PP      ",
+                        " SS   SS "),
 
-        banner[4] = String.join("   ",
-                " OO   OO ",
-                " OO   OO ",
-                " PP      ",
-                " SS   SS ");
+                String.join("   ",
+                        " OO   OO ",
+                        " OO   OO ",
+                        " PP      ",
+                        " SS   SS "),
 
-        banner[5] = String.join("   ",
-                " OO   OO ",
-                " OO   OO ",
-                " PP      ",
-                " SS   SS ");
-
-        banner[6] = String.join("   ",
-                "  OOOOO  ",
-                "  OOOOO  ",
-                " PP      ",
-                "  SSSSS  ");
+                String.join("   ",
+                        "  OOOOO  ",
+                        "  OOOOO  ",
+                        " PP      ",
+                        "  SSSSS  ")
+        };
 
         // Enhanced For Loop
         for (String line : banner) {
