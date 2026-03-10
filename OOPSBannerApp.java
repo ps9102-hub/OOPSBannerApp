@@ -1,72 +1,62 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class OOPSBannerApp {
 
+    public static Map<Character, String[]> createPatternMap() {
+
+        Map<Character, String[]> map = new HashMap<>();
+
+        map.put('O', new String[]{
+            " ***** ",
+            "*     *",
+            "*     *",
+            "*     *",
+            "*     *",
+            "*     *",
+            " ***** "
+        });
+
+        map.put('P', new String[]{
+            " ***** ",
+            "*     *",
+            "*     *",
+            " ***** ",
+            "*      ",
+            "*      ",
+            "*      "
+        });
+
+        map.put('S', new String[]{
+            " ***** ",
+            "*      ",
+            "*      ",
+            " ***** ",
+            "      *",
+            "      *",
+            " ***** "
+        });
+
+        return map;
+    }
+
+    public static void displayBanner(String word) {
+
+        Map<Character, String[]> map = createPatternMap();
+
+        for(int row=0; row<7; row++){
+
+            StringBuilder line = new StringBuilder();
+
+            for(char c : word.toCharArray()){
+                line.append(map.get(c)[row]).append(" ");
+            }
+
+            System.out.println(line);
+        }
+    }
+
     public static void main(String[] args) {
-
-        System.out.println("OOPS Banner App - UC3\n");
-
-        // Line 1
-        String line1 = String.join(" ",
-                "  *****  ",
-                "  *****  ",
-                "  ****** ",
-                "  ****** "
-        );
-
-        // Line 2
-        String line2 = String.join(" ",
-                " *     * ",
-                " *     * ",
-                " *     * ",
-                " *      "
-        );
-
-        // Line 3
-        String line3 = String.join(" ",
-                " *     * ",
-                " *     * ",
-                " *     * ",
-                " *      "
-        );
-
-        // Line 4
-        String line4 = String.join(" ",
-                " *     * ",
-                " *     * ",
-                "  ****** ",
-                "  *****  "
-        );
-
-        // Line 5
-        String line5 = String.join(" ",
-                " *     * ",
-                " *     * ",
-                " *       ",
-                "       * "
-        );
-
-        // Line 6
-        String line6 = String.join(" ",
-                " *     * ",
-                " *     * ",
-                " *       ",
-                "       * "
-        );
-
-        // Line 7
-        String line7 = String.join(" ",
-                "  *****  ",
-                "  *****  ",
-                " *       ",
-                "  *****  "
-        );
-
-        // Print banner
-        System.out.println(line1);
-        System.out.println(line2);
-        System.out.println(line3);
-        System.out.println(line4);
-        System.out.println(line5);
-        System.out.println(line6);
-        System.out.println(line7);
+        displayBanner("OOPS");
     }
 }
